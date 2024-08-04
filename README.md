@@ -1,0 +1,1 @@
+# RPGMaker_Asset_adder
