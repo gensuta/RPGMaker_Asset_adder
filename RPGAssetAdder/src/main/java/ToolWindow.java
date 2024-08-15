@@ -12,7 +12,9 @@ public class ToolWindow {
 
     JLabel jLabel = new JLabel("Drag the files/folders you want to add to RPGMaker.", SwingConstants.CENTER);
 
-    JPanel jPanel = new JPanel();
+    JPanel upperPanel = new JPanel();
+
+    JPanel filePanel = new JPanel();
 
 
     JLabel jLabel2 = new JLabel("Drag the folder you want your files to go into.", SwingConstants.CENTER);
@@ -28,9 +30,25 @@ public class ToolWindow {
 
     String targetPath = "";
 
+    JToolBar toolBar = new JToolBar();
+    JButton btn = new JButton("Preferences");
+    JButton btn2 = new JButton("About");
+    JButton btn3 = new JButton("Help");
+
     public ToolWindow() {
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new FlowLayout());
+
+
+        // TOOL BAR
+        toolBar.add(btn);
+        toolBar.add(btn2);
+        toolBar.add(btn3);
+
+        toolBar.setFloatable( false);
+        frame.add(toolBar);
+
+        toolBar.setLayout(new FlowLayout());
+
+
 
         jLabel.setFont(new Font("Arial", Font.PLAIN, 18));
         jLabel2.setFont(new Font("Arial", Font.PLAIN, 18));
@@ -40,9 +58,9 @@ public class ToolWindow {
         //files to be moved
         frame.add(jLabel);
 
-        frame.add(jPanel);
+        frame.add(filePanel);
 
-        jPanel.setPreferredSize(new Dimension(800, 50));
+        filePanel.setPreferredSize(new Dimension(800, 50));
 
         //javax.swing.border.TitledBorder dragBorder = new javax.swing.border.TitledBorder( "Drop 'em" );
         final JTextArea text = new JTextArea();
@@ -50,9 +68,9 @@ public class ToolWindow {
                 new javax.swing.JScrollPane(text),
                 java.awt.BorderLayout.CENTER);
 
-        jPanel.setBorder(BorderFactory.createLineBorder(Color.black));
+        filePanel.setBorder(BorderFactory.createLineBorder(Color.black));
 
-        new FileDrop(jPanel, new FileDrop.Listener() {
+        new FileDrop(filePanel, new FileDrop.Listener() {
             public void filesDropped(File[] files) {
                 for (int i = 0; i < files.length; i++) {
                     try {
@@ -83,9 +101,15 @@ public class ToolWindow {
             }
         });
 
+
+
         frame.pack();
         frame.setSize(800, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLocationRelativeTo(null);
+
+
+
         frame.setVisible(true);
 
     }
