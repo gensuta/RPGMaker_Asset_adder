@@ -4,6 +4,8 @@ public class ResultsPopUp extends JFrame{
     private JTextArea textArea1;
     private JPanel MainPanel;
 
+    //this is the pop-up that comes up after we hit the move button
+    //The results log is sent over from the RPGMakerGeneratorMoverWindow
     public ResultsPopUp(String resultsLog)
     {
         setTitle("RPGMaker Generator Mover Results");
