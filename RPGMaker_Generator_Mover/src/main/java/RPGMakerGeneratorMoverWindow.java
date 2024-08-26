@@ -299,10 +299,10 @@ public class RPGMakerGeneratorMoverWindow extends JFrame {
         else // all is selected and we're separating based on path
         {
             //we have to look at the path and check which path this file is a part of!
-            if (file.getPath().contains("Female")) {
+            if (file.getPath().toLowerCase().contains("female")) {
                 return "Female";
             }
-            else if (file.getPath().contains("Kid")) {
+            else if (file.getPath().toLowerCase().contains("kid")) {
                 return "Kid";
             }
             else {
