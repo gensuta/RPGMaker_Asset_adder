@@ -285,17 +285,31 @@ public class RPGMakerGeneratorMoverWindow extends JFrame {
     }
 
     private String getBodyType(File file) {
-
-        //we have to look at the path and check which path this file is a part of!
-        if (file.getPath().contains("Female")) {
-            return "Female";
+        if (femaleRadioButton.isSelected())
+        {
+            return"Female";
         }
-       else if (file.getPath().contains("Kid")) {
+        else if(maleRadioButton.isSelected())  {
+            return "Male";
+        }
+        else if (kidRadioButton.isSelected())
+        {
             return "Kid";
         }
-        else {
-            return "Male"; // defaulting to plopping things here
+        else // all is selected and we're separating based on path
+        {
+            //we have to look at the path and check which path this file is a part of!
+            if (file.getPath().contains("Female")) {
+                return "Female";
+            }
+            else if (file.getPath().contains("Kid")) {
+                return "Kid";
+            }
+            else {
+                return "Male"; // defaulting to plopping things here
+            }
         }
+
     }
 
     // Making sure our new file name is a higher number than any files that currently exists

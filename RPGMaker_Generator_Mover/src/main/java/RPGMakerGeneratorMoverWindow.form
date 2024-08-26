@@ -120,7 +120,7 @@
                     <properties>
                       <background color="-3814694"/>
                       <editable value="false"/>
-                      <foreground color="-3814694"/>
+                      <foreground color="-16777216"/>
                     </properties>
                   </component>
                 </children>

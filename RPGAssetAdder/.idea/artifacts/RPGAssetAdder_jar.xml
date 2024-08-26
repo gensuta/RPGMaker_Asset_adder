@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="RPGAssetAdder:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/RPGAssetAdder_jar</output-path>
-    <root id="archive" name="RPGAssetAdder.jar">
-      <element id="module-output" name="RPGAssetAdder" />
-    </root>
-  </artifact>
-</component>
