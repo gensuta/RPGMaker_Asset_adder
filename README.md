@@ -12,6 +12,7 @@ Whether it's one image or a whole folder, this tool will move the assets as long
 
 
 # Usage
+You need to install [JRE](https://www.java.com/en/download/windows_manual.jsp) to run this tool ( the jar file)
 
 [![Video tutorial](https://img.youtube.com/vi/BU3K0ccPeP8/hqdefault.jpg)](https://www.youtube.com/embed/BU3K0ccPeP8)
 
